@@ -1,0 +1,68 @@
+.growth-chart-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  z-index: 0;
+  /* background: url('/public/your-background-image.jpg') center center/contain no-repeat; */
+  opacity: 0.25;
+  pointer-events: none;
+}
+
+.growth-chart-container {
+  width: 100%;
+  max-width: 600px;
+  margin: 40px auto;
+  background: none;
+  border-radius: 0;
+  box-shadow: none;
+  padding: 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.growth-chart-title {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #1e3a8a;
+  margin-bottom: 24px;
+}
+
+.growth-tooltip {
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 8px 16px;
+  font-size: 1rem;
+  color: #222;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+}
+
+.growth-chart-bg-image-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 488/564;
+  min-height: 350px;
+  background-image: url('../Admin/icds.jpeg');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: left top;
+}
+
+.growth-chart-bg-image {
+  display: none;
+}
+
+.growth-chart-overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
