@@ -22,7 +22,7 @@ const PendingAdmins = ({ pendingAdmins, refreshData, apporderBy, apporder, appha
         });
         if (confirmed) {
             try {
-                await axios.post(`http://127.0.0.1:4200/${localStorage.getItem('loggedInUserId')}/verify`, {
+                await axios.post(`https://pl-api.iiit.ac.in/rcts/pmis/${localStorage.getItem('loggedInUserId')}/verify`, {
                     admin_id: id,
                     option: 1,
                 });
@@ -42,7 +42,7 @@ const PendingAdmins = ({ pendingAdmins, refreshData, apporderBy, apporder, appha
         });
         if (confirmed) {
             try {
-                await axios.post(`http://127.0.0.1:4200/${localStorage.getItem('loggedInUserId')}/verify`, {
+                await axios.post(`https://pl-api.iiit.ac.in/rcts/pmis/${localStorage.getItem('loggedInUserId')}/verify`, {
                     admin_id: id,
                     option: 0,
                 });

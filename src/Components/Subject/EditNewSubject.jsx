@@ -86,7 +86,7 @@ function EditSubject() {
     };
 
     try {
-      const response = await fetch("http://127.0.0.1:4200/getphonesub", {
+      const response = await fetch("https://pl-api.iiit.ac.in/rcts/pmis/getphonesub", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -139,7 +139,7 @@ function EditSubject() {
       const formData = new FormData();
       formData.append('image', blob, 'captured_face.jpg');
 
-      const response = await fetch("http://127.0.0.1:4200/getsubjectbyimage", {
+      const response = await fetch("https://pl-api.iiit.ac.in/rcts/pmis/getsubjectbyimage", {
         method: "POST",
         body: formData,
       });

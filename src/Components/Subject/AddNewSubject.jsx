@@ -41,7 +41,7 @@ function AddNewSubject() {
   // const accessKey = "minioadmin";
   // const secretKey = "minioadmin";
   // const bucketName = "pmis-001";
-  const minioEndpoint = "http://localhost:9000"; // Default MinIO endpoint
+  const minioEndpoint = "https://pl-minio.iiit.ac.in"; // Default MinIO endpoint
 const accessKey = "minioadmin";                // Default access key
 const secretKey = "minioadmin";                // Default secret key
 const bucketName = "pmis-001";  
@@ -338,7 +338,7 @@ const bucketName = "pmis-001";
       }
       formData.append("profilePicture", finalImageName);
       
-      const url = `http://127.0.0.1:4200/${loggedInUserId}/addNewSubject`;
+      const url = `https://pl-api.iiit.ac.in/rcts/pmis/${loggedInUserId}/addNewSubject`;
       
       const response = await fetch(url, {
         method: "POST",

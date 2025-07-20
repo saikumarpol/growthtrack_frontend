@@ -36,7 +36,7 @@ const SignIn_dup = () => {
 
     const checkPhone = async (phoneNo) => {
         try {
-            const response = await axios.post(`http://127.0.0.1:4200/login`, { phone: phoneNo });
+            const response = await axios.post(`https://pl-api.iiit.ac.in/rcts/pmis/login`, { phone: phoneNo });
             return response;
         } catch (error) {
             console.error("Login error:", error);
@@ -51,7 +51,7 @@ const SignIn_dup = () => {
 
     const sendOtp = async (phone) => {
         try {
-            const res = await axios.post("http://127.0.0.1:4200/send-otp", { phone });
+            const res = await axios.post("https://pl-api.iiit.ac.in/rcts/pmis/send-otp", { phone });
             return res;
         } catch (err) {
             console.error("OTP Error:", err);
@@ -66,7 +66,7 @@ const SignIn_dup = () => {
 
     const verifyOtp = async (phone, otp) => {
         try {
-            const res = await axios.post("http://127.0.0.1:4200/verify-otp", { phone, otp });
+            const res = await axios.post("https://pl-api.iiit.ac.in/rcts/pmis/verify-otp", { phone, otp });
             return res;
         } catch (err) {
             return { data: { status: "invalid" } };

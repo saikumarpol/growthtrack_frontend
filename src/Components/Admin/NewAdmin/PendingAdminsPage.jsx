@@ -17,7 +17,7 @@ const PendingAdminsPage = () => {
     useEffect(() => {
         const fetchPendingAdmins = async () => {
             try {
-                const response = await axios.get("http://127.0.0.1:4200/getPendingAdmins");
+                const response = await axios.get("https://pl-api.iiit.ac.in/rcts/pmis/getPendingAdmins");
                 setPendingAdmins(response.data);
             } catch (error) {
                 swal("Check", "Failed to fetch pending admins data.", "Check");

@@ -80,7 +80,7 @@ function Portfolio1() {
   // SMS Sending Function
   const handleSMS = async (id) => {
     try {
-      const response = await fetch(`http://127.0.0.1:4200/message/${id}`, {
+      const response = await fetch(`https://pl-api.iiit.ac.in/rcts/pmis/message/${id}`, {
         method: "POST",
         headers: {
           'Content-Type': 'application/json',
@@ -130,7 +130,7 @@ function Portfolio1() {
       return;
     }
 
-    fetch('http://127.0.0.1:4200/getsubjectbyid', {
+    fetch('https://pl-api.iiit.ac.in/rcts/pmis/getsubjectbyid', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -358,7 +358,7 @@ function Portfolio1() {
       formData.append("weight_image", imageWt);
       formData.append("height_image", imageHt);
 
-      const url = `http://127.0.0.1:4200/${subjectId}/editSubject`;
+      const url = `https://pl-api.iiit.ac.in/rcts/pmis/${subjectId}/editSubject`;
 
       const response = await fetch(url, {
         method: "POST",
@@ -404,7 +404,7 @@ function Portfolio1() {
     if (!id) return;
 
     try {
-      const response = await fetch('http://127.0.0.1:4200/getMeasurementHistory', {
+      const response = await fetch('https://pl-api.iiit.ac.in/rcts/pmis/getMeasurementHistory', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -526,7 +526,7 @@ function Portfolio1() {
 
     try {
       // Update Height
-      const heightResponse = await fetch('http://127.0.0.1:4200/updateSubjectHeight', {
+      const heightResponse = await fetch('https://pl-api.iiit.ac.in/rcts/pmis/updateSubjectHeight', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -549,7 +549,7 @@ function Portfolio1() {
       heightSuccess = heightData.status === 'Success';
 
       // Update Weight
-      const weightResponse = await fetch('http://127.0.0.1:4200/updateSubjectWeight', {
+      const weightResponse = await fetch('https://pl-api.iiit.ac.in/rcts/pmis/updateSubjectWeight', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -574,7 +574,7 @@ function Portfolio1() {
       // Update BMI
       const calculatedBmi = calculateBmi(height, weight);
       if (calculatedBmi) {
-        const bmiResponse = await fetch('http://127.0.0.1:4200/updateSubjectBmi', {
+        const bmiResponse = await fetch('https://pl-api.iiit.ac.in/rcts/pmis/updateSubjectBmi', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',

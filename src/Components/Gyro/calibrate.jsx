@@ -56,7 +56,7 @@ const Calibrate = () => {
         console.log('Adding userId to form data:', userId);
       }
 
-      const response = await fetch('http://127.0.0.1:4200/api/height-calibration', {
+      const response = await fetch('https://pl-api.iiit.ac.in/rcts/pmis/api/height-calibration', {
         method: 'POST',
         body: formData,
         credentials: 'include',

@@ -29,7 +29,7 @@ function Children() {
 
   const fetchChildrenData = async (userId) => {
     try {
-      const response = await axios.get(`http://127.0.0.1:4200/getAllSubjects`);
+      const response = await axios.get(`https://pl-api.iiit.ac.in/rcts/pmis/getAllSubjects`);
       setChildrenData(response.data);
       console.log("data:", response.data);
     } catch (error) {

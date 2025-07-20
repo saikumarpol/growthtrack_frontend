@@ -47,7 +47,7 @@ const handleSMS = async () => {
   try {
     console.log("Sending SMS for ID:", id);
 
-    const response = await fetch(`http://127.0.0.1:4200/message/${id}`, {
+    const response = await fetch(`https://pl-api.iiit.ac.in/rcts/pmis/message/${id}`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -97,7 +97,7 @@ const handleSMS = async () => {
     // API call to fetch subject
     const fetchSubject = async () => {
         try {
-            const response = await fetch(`http://127.0.0.1:4200/getAllSubjects/${id}`, {
+            const response = await fetch(`https://pl-api.iiit.ac.in/rcts/pmis/getAllSubjects/${id}`, {
                 method: "POST",
             });
             if (response.ok) {

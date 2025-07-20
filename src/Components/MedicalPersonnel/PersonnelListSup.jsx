@@ -39,7 +39,7 @@ const PersonnelListSup = () => {
     // Retrieve Personnel data and set it in personnelData
     const fetchPersonnelData = async () => {
         try {
-            const response = await fetch("http://127.0.0.1:4200/getAllMedicalPersonnel");
+            const response = await fetch("https://pl-api.iiit.ac.in/rcts/pmis/getAllMedicalPersonnel");
             const data = await response.json();
             setPersonnelData(data); // Store fetched data
         } catch (error) {
@@ -127,7 +127,7 @@ const PersonnelListSup = () => {
         });
         try {
             if (confirmed) {
-                await axios.post(`http://127.0.0.1:4200/${loggedInUserId}/verifymp`, {
+                await axios.post(`https://pl-api.iiit.ac.in/rcts/pmis/${loggedInUserId}/verifymp`, {
                     mp_id: id,
                     option: 0
                 });

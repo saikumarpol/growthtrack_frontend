@@ -94,7 +94,7 @@ function PatientSummaryCards() {
   useEffect(() => {
     setLoading(true);
     const loggedInUserId = localStorage.getItem("loggedInUserId");
-    fetch(`http://127.0.0.1:4200/getAllSubjects?id=${loggedInUserId}`)
+    fetch(`https://pl-api.iiit.ac.in/rcts/pmis/getAllSubjects?id=${loggedInUserId}`)
       .then((response) => response.json())
       .then((responseData) => {
         if (responseData && responseData.status === "Success" && Array.isArray(responseData.data)) {
@@ -123,7 +123,7 @@ function PatientSummaryCards() {
   // Handle SMS sending
   const handleSMS = async (id) => {
     try {
-      const response = await fetch(`http://127.0.0.1:4200/message/${id}`, {
+      const response = await fetch(`https://pl-api.iiit.ac.in/rcts/pmis/message/${id}`, {
         method: "POST",
       });
       if (response.ok) {

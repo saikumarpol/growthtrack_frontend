@@ -28,7 +28,7 @@ function Supervisors() {
 
   const fetchSupervisorsData = async (userId) => {
     try {
-      const response = await axios.get(`http://127.0.0.1:4200/getAllAdmins`);
+      const response = await axios.get(`https://pl-api.iiit.ac.in/rcts/pmis/getAllAdmins`);
       setSupervisorsData(response.data);
       console.log(response.data)
     } catch (error) {

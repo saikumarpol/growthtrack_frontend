@@ -44,8 +44,8 @@
 //     console.log("Subject Gender:", subjectGender);
 //   }, [location.state, subjectId, subjectName, subjectAge, subjectGender]);
 
-//   const BACKEND_ESTIMATION_API = 'http://127.0.0.1:4200/api/height-estimation';
-//   const BACKEND_FACE_RECOGNITION_API = 'http://127.0.0.1:4200/getsubjectbyimage';
+//   const BACKEND_ESTIMATION_API = 'https://pl-api.iiit.ac.in/rcts/pmis/api/height-estimation';
+//   const BACKEND_FACE_RECOGNITION_API = 'https://pl-api.iiit.ac.in/rcts/pmis/getsubjectbyimage';
 
 //   // Handle device orientation
 //   useEffect(() => {
@@ -269,7 +269,7 @@
 //       localStorage.setItem('heightSubjectId', effectiveSubjectId);
 //       try {
 //         console.log(`Attempting to update subject height: ID=${effectiveSubjectId}, height=${heightCm}`);
-//         const updateResponse = await fetch(`http://127.0.0.1:4200/updateSubjectHeight`, {
+//         const updateResponse = await fetch(`https://pl-api.iiit.ac.in/rcts/pmis/updateSubjectHeight`, {
 //           method: 'POST',
 //           headers: {
 //             'Content-Type': 'application/json',
@@ -607,8 +607,8 @@ const Imagewithface = () => {
     console.log("Subject Gender:", subjectGender);
   }, [location.state, subjectId, subjectName, subjectAge, subjectGender]);
 
-  const BACKEND_ESTIMATION_API = 'http://127.0.0.1:4200/api/height-estimation';
-  const BACKEND_FACE_RECOGNITION_API = 'http://127.0.0.1:4200/getsubjectbyimage';
+  const BACKEND_ESTIMATION_API = 'https://pl-api.iiit.ac.in/rcts/pmis/api/height-estimation';
+  const BACKEND_FACE_RECOGNITION_API = 'https://pl-api.iiit.ac.in/rcts/pmis/getsubjectbyimage';
 
   // Handle device orientation
   useEffect(() => {
@@ -830,7 +830,7 @@ const Imagewithface = () => {
       localStorage.setItem('heightSubjectId', effectiveSubjectId);
       try {
         console.log(`Attempting to update subject height: ID=${effectiveSubjectId}, height=${heightCm}`);
-        const updateResponse = await fetch(`http://127.0.0.1:4200/updateSubjectHeight`, {
+        const updateResponse = await fetch(`https://pl-api.iiit.ac.in/rcts/pmis/updateSubjectHeight`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',

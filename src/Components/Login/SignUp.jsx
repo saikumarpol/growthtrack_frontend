@@ -52,7 +52,7 @@ function SignUp() {
         setLoading(true);
     
         // Make request to backend
-        fetch("http://127.0.0.1:4200/signupAdmin", {
+        fetch("https://pl-api.iiit.ac.in/rcts/pmis/signupAdmin", {
             method: "POST",
             headers: {
                 'Content-Type': 'application/json'

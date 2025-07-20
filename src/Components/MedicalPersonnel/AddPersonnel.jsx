@@ -48,7 +48,7 @@ function AddPersonnel() {
 
   const fetchSupervisors = async () => {
     try {
-      const response = await fetch("http://127.0.0.1:4200/getAllAdmins");
+      const response = await fetch("https://pl-api.iiit.ac.in/rcts/pmis/getAllAdmins");
       const data = await response.json();
       setSupervisors(data);
       console.log(data);
@@ -114,7 +114,7 @@ function AddPersonnel() {
 
     setLoading(true);
 
-    const url = `http://127.0.0.1:4200/${loggedInUserId}/addMedicalPersonnel`;
+    const url = `https://pl-api.iiit.ac.in/rcts/pmis/${loggedInUserId}/addMedicalPersonnel`;
     console.log("request data", loggedInUserId, requestData);
 
     fetch(url, {

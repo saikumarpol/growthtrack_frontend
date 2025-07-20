@@ -70,7 +70,7 @@ const FileUpload = ({ selectedSupervisorId }) => { // Changed Id to selectedSupe
       // Use selectedSupervisorId if provided, otherwise fall back to user
       const submitId = selectedSupervisorId || user;
 
-      await axios.post(`http://127.0.0.1:4200/uploadMultipleMedicalPersonnel`, {
+      await axios.post(`https://pl-api.iiit.ac.in/rcts/pmis/uploadMultipleMedicalPersonnel`, {
         data: fileData,
         id: submitId,
       });

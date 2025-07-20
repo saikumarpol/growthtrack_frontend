@@ -183,7 +183,7 @@ function Portfolio1() {
       formData.append("height_image", imageHt);
       formData.append("weight_image", imageWt);
 
-      const response = await fetch(`http://127.0.0.1:4200/${subjectId}/editSubject`, {
+      const response = await fetch(`https://pl-api.iiit.ac.in/rcts/pmis/${subjectId}/editSubject`, {
         method: "POST",
         body: formData,
       });

@@ -35,7 +35,7 @@ function AddSubject() {
     };
     localStorage.setItem('patientId', patientid);
 
-    const url = `http://127.0.0.1:4200/getsubjectbyid`;
+    const url = `https://pl-api.iiit.ac.in/rcts/pmis/getsubjectbyid`;
 
     try {
       const response = await fetch(url, {
@@ -94,7 +94,7 @@ function AddSubject() {
     };
     localStorage.setItem('patientId', patientid);
 
-    const url = `http://127.0.0.1:4200/getsubjectbyid`;
+    const url = `https://pl-api.iiit.ac.in/rcts/pmis/getsubjectbyid`;
 
     try {
       const response = await fetch(url, {

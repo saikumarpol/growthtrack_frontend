@@ -17,7 +17,7 @@ const ApprovedAdminsPage = () => {
     useEffect(() => {
         const fetchApprovedAdmins = async () => {
             try {
-                const response = await axios.get("http://127.0.0.1:4200/getAllAdmins");
+                const response = await axios.get("https://pl-api.iiit.ac.in/rcts/pmis/getAllAdmins");
                 setApprovedAdmins(response.data);
             } catch (error) {
                 swal("Error", "Failed to fetch approved admins data.", "error");

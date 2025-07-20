@@ -43,7 +43,7 @@ const ImageCaptureNoGyro1 = () => {
     console.log("Subject Gender:", subjectGender);
   }, [location.state, subjectId, subjectName, subjectAge, subjectGender]);
 
-  const BACKEND_ESTIMATION_API = 'http://127.0.0.1:4200/api/height-estimation';
+  const BACKEND_ESTIMATION_API = 'https://pl-api.iiit.ac.in/rcts/pmis/api/height-estimation';
 
   // Handle device orientation
   useEffect(() => {
@@ -162,7 +162,7 @@ const ImageCaptureNoGyro1 = () => {
         localStorage.setItem('heightSubjectId', subjectId);          // Save the height to the subject record in the database
           try {
             console.log(`Attempting to update subject height: ID=${subjectId}, height=${data.height_cm}`);
-            const updateResponse = await fetch(`http://127.0.0.1:4200/updateSubjectHeight`, {
+            const updateResponse = await fetch(`https://pl-api.iiit.ac.in/rcts/pmis/updateSubjectHeight`, {
               method: 'POST',
               headers: {
                 'Content-Type': 'application/json',

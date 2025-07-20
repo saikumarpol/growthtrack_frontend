@@ -22,7 +22,7 @@ const ApprovedAdmins = ({ approvedAdmins, refreshData, apporderBy, apporder, app
         });
         if (confirmed) {
             try {
-                await axios.post(`http://127.0.0.1:4200/${localStorage.getItem('loggedInUserId')}/verify`, {
+                await axios.post(`https://pl-api.iiit.ac.in/rcts/pmis/${localStorage.getItem('loggedInUserId')}/verify`, {
                     admin_id: id,
                     option: 2,  // Option for revoking approval
                 });

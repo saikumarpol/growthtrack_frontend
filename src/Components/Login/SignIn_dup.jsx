@@ -38,7 +38,7 @@ const SignIn_dup = () => {
     const checkPhone = async (phoneNo) => {
         const requestData = { phone: phoneNo };
         try {
-            const response = await axios.post(`http://127.0.0.1:4200/login`, requestData);
+            const response = await axios.post(`https://pl-api.iiit.ac.in/rcts/pmis/login`, requestData);
             localStorage.setItem('loggedInUserId', response.data.id);
             localStorage.setItem('loggedInUserRole', response.data.admin);
             return response;

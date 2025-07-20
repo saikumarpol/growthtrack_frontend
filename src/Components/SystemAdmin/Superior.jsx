@@ -29,7 +29,7 @@ const Superior = () => {
     const fetchapprovalAdminData = async () => {
         try {
             // const response = await fetch("http://localhost:3001/getPendingAdmins");
-            const response = await fetch("http://127.0.0.1:4200/getPendingAdmins");
+            const response = await fetch("https://pl-api.iiit.ac.in/rcts/pmis/getPendingAdmins");
             const data = await response.json();
             setapprovalAdminData(data); // Store fetched data
         } catch (error) {
@@ -41,7 +41,7 @@ const Superior = () => {
 
     const handleAccept = async (id) => {
         // console.log(id)
-        await axios.post(`http://127.0.0.1:4200/${loggedInUserId}/verify`, {
+        await axios.post(`https://pl-api.iiit.ac.in/rcts/pmis/${loggedInUserId}/verify`, {
             admin_id: id,
             option: 1
         }).then(
@@ -57,7 +57,7 @@ const Superior = () => {
 
     const handleReject = async (id) => {
 
-        await axios.post(`http://127.0.0.1:4200/${loggedInUserId}/verify`, {
+        await axios.post(`https://pl-api.iiit.ac.in/rcts/pmis/${loggedInUserId}/verify`, {
             admin_id: id,
             option: 0
         }).then(

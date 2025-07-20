@@ -41,7 +41,7 @@ function PersonnelList() {
 
   const fetchPersonnelData = async (adminId) => {
     try {
-      const response = await fetch(`http://127.0.0.1:4200/getMedicalPersonnelByAdmin?admin_id=${adminId}`);
+      const response = await fetch(`https://pl-api.iiit.ac.in/rcts/pmis/getMedicalPersonnelByAdmin?admin_id=${adminId}`);
       const data = await response.json();
       console.log("data::",data)
       setPersonnelData(data);
@@ -116,7 +116,7 @@ function PersonnelList() {
 
     if (confirmed) {
       try {
-        await axios.post(`http://127.0.0.1:4200/${id}/verifymp`, {
+        await axios.post(`https://pl-api.iiit.ac.in/rcts/pmis/${id}/verifymp`, {
           mp_id: id,
           option: 0,
         });

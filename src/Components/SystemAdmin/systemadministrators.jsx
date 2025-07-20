@@ -10,11 +10,11 @@ const AdminsList = () => {
 
     const fetchAdminData = async () => {
         try {
-            const pendingResponse = await fetch("http://127.0.0.1:4200/getPendingAdmins");
+            const pendingResponse = await fetch("https://pl-api.iiit.ac.in/rcts/pmis/getPendingAdmins");
             const pendingData = await pendingResponse.json();
             setPendingAdmins(pendingData);
 
-            const approvedResponse = await fetch("http://127.0.0.1:4200/getAllAdmins");
+            const approvedResponse = await fetch("https://pl-api.iiit.ac.in/rcts/pmis/getAllAdmins");
             const approvedData = await approvedResponse.json();
             setApprovedAdmins(approvedData);
         } catch (error) {

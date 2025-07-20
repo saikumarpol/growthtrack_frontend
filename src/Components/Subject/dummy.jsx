@@ -147,7 +147,7 @@ function SubjectsListCards() {
     setLoading(true);
     setPatients([]); // Clear previous data
     const loggedInUserId = localStorage.getItem("loggedInUserId");
-    fetch(`http://127.0.0.1:4200/getAllSubjects?id=${loggedInUserId}`)
+    fetch(`https://pl-api.iiit.ac.in/rcts/pmis/getAllSubjects?id=${loggedInUserId}`)
       .then((response) => response.json())
       .then((responseData) => {
         console.log("API Response:", JSON.stringify(responseData, null, 2));
@@ -183,7 +183,7 @@ function SubjectsListCards() {
   // Handle SMS sending
   const handleSMS = async (id) => {
     try {
-      const response = await fetch(`http://127.0.0.1:4200/message/${id}`, { method: "POST" });
+      const response = await fetch(`https://pl-api.iiit.ac.in/rcts/pmis/message/${id}`, { method: "POST" });
       const data = await response.json();
       await swal({
         title: response.ok && data.status === "message sent" ? "Success" : "Check",

@@ -80,7 +80,7 @@ const GrowthTracking = () => {
       setLoading(true);
       try {
         // Fetch subject details from /getsubjectbyid
-        const response = await fetch("http://127.0.0.1:4200/getsubjectbyid", {
+        const response = await fetch("https://pl-api.iiit.ac.in/rcts/pmis/getsubjectbyid", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ id }),
@@ -109,7 +109,7 @@ const GrowthTracking = () => {
         // Fetch ageMonths from /getAllSubjects if not in /getsubjectbyid
         if (!result.ageMonths) {
           const loggedInUserId = localStorage.getItem("loggedInUserId");
-          const subjectsResponse = await fetch(`http://127.0.0.1:4200/getAllSubjects?id=${loggedInUserId}`);
+          const subjectsResponse = await fetch(`https://pl-api.iiit.ac.in/rcts/pmis/getAllSubjects?id=${loggedInUserId}`);
           if (subjectsResponse.ok) {
             const subjectsResult = await subjectsResponse.json();
             console.log("getAllSubjects Response:", JSON.stringify(subjectsResult, null, 2));

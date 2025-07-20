@@ -29,7 +29,7 @@
 
 //   const fetchWorkersData = async (userId) => {
 //     try {
-//       const response = await axios.get(`http://127.0.0.1:4200/getAllMedicalPersonnel`);
+//       const response = await axios.get(`https://pl-api.iiit.ac.in/rcts/pmis/getAllMedicalPersonnel`);
 //       setWorkersData(response.data);
 //     } catch (error) {
 //       console.error("Error fetching workers data:", error);
@@ -126,7 +126,7 @@ function AnganwadiWorkers() {
 
   const fetchWorkersData = async (userId) => {
     try {
-      const response = await axios.get(`http://127.0.0.1:4200/getAllMedicalPersonnel`);
+      const response = await axios.get(`https://pl-api.iiit.ac.in/rcts/pmis/getAllMedicalPersonnel`);
       setWorkersData(response.data);
     } catch (error) {
       console.error("Error fetching workers data:", error);

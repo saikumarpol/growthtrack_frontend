@@ -159,8 +159,8 @@ function Portfolio2() {
         formData.append("mp", loggedInUserId);
         formData.append("height_image", image);
     
-        // const url = `http://127.0.0.1:4200/${loggedInUserId}/${phone}/editSubject`;
-        const url = `http://127.0.0.1:4200/${subjectId}/editSubject`;
+        // const url = `https://pl-api.iiit.ac.in/rcts/pmis/${loggedInUserId}/${phone}/editSubject`;
+        const url = `https://pl-api.iiit.ac.in/rcts/pmis/${subjectId}/editSubject`;
         fetch(url, {
             method: "POST",
             body: formData

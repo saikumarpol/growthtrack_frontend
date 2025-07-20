@@ -17,7 +17,7 @@ const DashboardSuperior = () => {
         // Fetch count of pending admins
         const fetchPendingAdmins = async () => {
             try {
-                const response = await fetch("http://127.0.0.1:4200/getPendingAdmins");
+                const response = await fetch("https://pl-api.iiit.ac.in/rcts/pmis/getPendingAdmins");
                 const data = await response.json();
                 setPendingCount(data.length); // Set the count of pending admins
             } catch (error) {
