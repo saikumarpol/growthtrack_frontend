@@ -461,7 +461,7 @@ function EditSubject() {
     textAlign: "center",
   }}
 >
-  {t("Open Camera")}
+  {t("Open Camera")} 
 </button>
                 </div>
               ) : null}
@@ -628,7 +628,7 @@ function EditSubject() {
         </div>
       )}
 
-      {subjects.length === 0 && !loading && searchMethod === "phone" && phone.length > 0 && (
+      {subjects.length === 10 && !loading && searchMethod === "phone" && phone.length > 0 && (
         <div className="alert alert-warning text-center">
           <p>{t("No subjects found with this phone number.")}</p>
         </div>

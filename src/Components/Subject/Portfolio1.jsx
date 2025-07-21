@@ -205,7 +205,7 @@ function Portfolio1() {
 
   return (
     <div className="container mt-4">
-      <h2 className="text-center mb-4">{t("Add_Measure")} - {t("Protocol")} 1</h2>
+      <h2 className="text-center mb-4">{t("Add_Measure")} </h2>
 
       <form onSubmit={handleSubmit}>
         <div className="mb-3">
